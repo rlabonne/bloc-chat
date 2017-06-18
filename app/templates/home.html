@@ -1,1 +1,13 @@
-<h1>Home Page</h1>
+<section ng-controller="HomeCtrl as home">
+    <div class="container-fluid">
+        <div class="row content">
+            <div class="col-sm-3 sidenav">
+                <h1>Bloc Chat</h1><br>
+                <ul class="nav nav-pills nav-stacked">
+                  <li class="active" ng-repeat="room in home.rooms track by $index">
+                    <a href="#room">Room {{ ($index + 1) }}</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
