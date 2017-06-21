@@ -1,13 +1,26 @@
-<section ng-controller="HomeCtrl as home">
-    <div class="container-fluid">
-        <div class="row content">
-            <div class="col-sm-3 sidenav">
-                <h1>Bloc Chat</h1><br>
-                <ul class="nav nav-pills nav-stacked">
-                  <li class="active" ng-repeat="room in home.rooms track by $index">
-                    <a href="#room">Room {{ ($index + 1) }}</a></li>
-                </ul>
-            </div>
-        </div>
+<section>
+
+  <div class="left-column">
+    <div align="center" class="left-column-text">
+
+        <h1 class="title">Bloc Chat</h1>
+
+        <button class="btn btn-info" ng-click="home.openModal()">New Room</button>
+        <br><br>
+
+    <div ng-repeat="room in home.chatrooms">
+        <p>{{ room.$value }}</p>
+      </div>
     </div>
+  </div>
+
+</section>
+
+<section>
+  <div class="right-column">
+
+    <p>Test right column</p>
+
+  </div>
+
 </section>
